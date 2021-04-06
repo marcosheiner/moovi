@@ -165,11 +165,17 @@ iframe{
     
 }
 
+.index-item{
+    display: block;
+    
+    
+}
+
 
 .title-index{
     color: aliceblue;
     font-weight: 700;
-    font-size: 2cm;
+    font-size: 3cm;
     margin: 0;
     max-width: 100%;
 }
@@ -184,7 +190,24 @@ iframe{
 .btn-entrar{
     background-color: #a970ff;
     border-radius: 12px;
-    width: 150px;
+    max-width: 100%;
+    width: 100%;
 }
 
+/*suporte*/
+.tilte-aba{
+    color: white;
+}
 
+.text-aba{
+    color: whitesmoke;
+}
+
+.back-text{
+    background-color: #18181b;
+    padding: 25px;
+    border-radius: 12px;
+    width: auto;
+}
+
+/*busca input*/

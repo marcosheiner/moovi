@@ -36,3 +36,5 @@
         </ul>
       </div>
   </nav>
+
+  <i data-feather="chevron-right" width="10"></i>
