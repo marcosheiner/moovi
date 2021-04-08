@@ -31,7 +31,7 @@
                   <a class="nav-link" href="pages/suporte.php">Suporte</a>
               </li>
               <li class="nav-item btn-entrar">
-                  <a class="nav-link" href="pages/dashboard.php">Entrar</a>
+                  <a class="nav-link" href="pages/login.php">Entrar</a>
               </li>
             </ul>
         </div>
@@ -42,7 +42,6 @@
 
         <div class="index-item">
           <h1 class="title-index">Moovi</h1>
-          <h5 class="subtitle-index">Filmes e Séries</h5>
         </div>
         
       </div>

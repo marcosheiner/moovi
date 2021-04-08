@@ -31,7 +31,7 @@
             <a class="nav-link" href="#">Perfil</a>
           </li>
           <li class="nav-item nav-item-hover">
-            <a class="nav-link" href="../index.php">Sair</a>
+            <a class="nav-link" href="../logout.php">Sair</a>
           </li>
         </ul>
       </div>

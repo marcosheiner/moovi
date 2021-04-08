@@ -1,9 +1,28 @@
+<?php
+	// Initialize session
+	session_start();
+
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
+		header('location: ../pages/login.php');
+		exit;
+	}
+?>
+
+<?php
+
+require_once "../config/config.php";
+
+$sel_filmes_database = "SELECT * FROM filmes";
+$winkel_filmes = $mysql_db->query($sel_filmes_database) or die($mysql_db->error);
+
+?>
+
 <?php include '../includes/menudashboard.php'; ?>
 
     <div class="container">
         <br>
         <h1 class="title-moovi">Moovi</h1>
-        <p class="welcome-user">Bem Vindo, Marcos!</p>
+        <p class="welcome-user">Bem Vindo, <?php echo $_SESSION['username']; ?>!</p>
         <hr class="linha">
         
         <br>
@@ -17,68 +36,15 @@
         <br>
         
         <div class="flexbox">
-            <!--1-->
-            <div class="flex-item zoom">
-                <a href="../filmes/areafilme.php"><img src="../img/capas/velozes5.jpg" alt="" class="capas"></a>
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-                <span class="badge badge-warning">Filme</span>
-            </div>
-            <!--2-->
-            <div class="flex-item zoom">
-                <a href="../filmes/muie.php"><img src="https://cdnsecakmi.kaltura.com/api_v3/index.php/service/thumbAsset/action/serve/thumbAssetId/1_br4o1t5l/ks/ZjE3YmYzY2RjZjFkNjNlYmI3NjdlZTM0OTdmYTk5NzMwZTE1ZDkyOXwyMjY3ODMxOzIyNjc4MzE7MTYxNzc0NTUzNDswOzIzODgzOzE3NzBjMmFhZmE0N2FiOWY3NTQ1NTZmZGU2OTkwYTlhOw==" alt="" class="capas"></a>
-                <p class="title-video">Mulher-Maravilha 1984</p>
-                <span class="badge badge-light">Ação</span>
-                <span class="badge badge-warning">Filme</span>
-            </div>
-            <!--3-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
-            <!--4-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
-            <!--5-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
-            <!--6-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
-            <!--7-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
-            <!--8-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
-            <!--9-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
-            <!--10-->
-            <div class="flex-item zoom">
-                <img src="../img/capas/velozes5.jpg" alt="" class="capas">
-                <p class="title-video">Velozes e Furiosos 5</p>
-                <span class="badge badge-light">Ação</span>
-            </div>
+            <?php while($dados_filme = $winkel_filmes->fetch_array()){ ?>
+                <div class="flex-item zoom">
+                    <a href="../filmes/areafilme.php"><img src="<?php echo $dados_filme["link_capa"]; ?>" alt="" class="capas"></a>
+                    <p class="title-video"><?php echo $dados_filme["nome"]; ?></p>
+                    <span class="badge badge-light"><?php echo $dados_filme["genero_filme"]; ?></span>
+                    <span class="badge badge-warning"><?php echo $dados_filme["tipo_grupo"]; ?></span>
+                    <span class="badge badge-dark"><?php echo $dados_filme["nota"]; ?></span>
+                </div>
+            <?php }?>
         </div>
 
         

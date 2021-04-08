@@ -1,3 +1,13 @@
+<?php
+	// Initialize session
+	session_start();
+
+	if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== false) {
+		header('location: ../pages/login.php');
+		exit;
+	}
+?>
+
 <?php include '../includes/menudashboard.php'; ?>
 
     <div class="container">
@@ -19,7 +29,7 @@
 
             <div class="flexbox-video">
                 <div class="flex-video">
-                    <iframe frameborder="0" src="https://mega.nz/embed/OcskVKzS#PNYHvZavCbtQy1e26Yq7jLkHgAglZS1x850O9wO9xz8" allowfullscreen ></iframe>
+                    <iframe frameborder="0" src="https://embed.querofilmeshd.co/tt2820852" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

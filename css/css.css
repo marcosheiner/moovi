@@ -42,6 +42,7 @@ body{
     margin-bottom: 1em;
     border: solid 3px;
     border-color: #a970ff;
+    background-color: #a970ff;
     
 }
 
@@ -79,6 +80,7 @@ body{
 
 .welcome-user{
     color: whitesmoke;
+    text-transform: capitalize;
 }
 
 .title-filme-home{
@@ -105,6 +107,8 @@ body{
 /*capas*/
 .capas{
     width: 100%;
+    height: 290px;
+    object-fit: cover;
 
 }
 
@@ -140,15 +144,16 @@ body{
     background-color: #a970ff;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+    padding-bottom: 10px;
     width: 100%;
-    height: 450px;
+    height: 500px;
     
 }
 
 /*iframe*/
 iframe{
     width: 100%;
-    height: 430px;
+    height: auto;
     margin: 0;
 }
 
@@ -210,4 +215,87 @@ iframe{
     width: auto;
 }
 
-/*busca input*/
+/*login*/
+.btn-login{
+    background-color: #a970ff;
+    color: aliceblue;
+}
+
+label{
+    color: aliceblue;
+}
+
+.flexbox-login{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+    
+}
+
+.login-item{
+    display: block;
+    background-color: #18181b;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 100%;
+    
+    
+}
+
+.title-login{
+    text-align: center;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+.link-senha{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: aliceblue;
+}
+
+/*inputs*/
+
+
+/*admin*/
+.admin-item{
+    background-color: #18181b;
+    border-radius: 12px;
+    padding: 25px;
+    border-bottom: 10px solid #a970ff;
+}
+
+.btn-cadastrar{
+    margin-top: 25px;
+    border-radius: 12px;
+    background-color: #a970ff;
+    color: white;
+    font-weight: 300;
+}
+
+.btn-cadastrar:hover{
+    background-color: #9462e0;
+}
+
+.btn-limpar{
+    margin-top: 25px;
+    border-radius: 12px;
+    background-color: #f8f8f8;
+    color: black;
+    font-weight: 300;
+}
+
+.btn-limpar:hover{
+    background-color: #f5f5f5;
+}
+
+.link-voltar{
+    color: white;
+}
+.link-voltar:hover{
+    color: #a970ff;
+}

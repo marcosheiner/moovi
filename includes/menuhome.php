@@ -15,7 +15,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="../index.php">Logo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i data-feather="menu" style="color: white;"></i>
         </button>
