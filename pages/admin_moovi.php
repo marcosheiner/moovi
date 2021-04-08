@@ -18,6 +18,7 @@
     <hr class="linha">
 
 	<a href="cad_filme.php" style="text-decoration: none;" class="btn btn-cadastrar">Cadastrar Embed Filme</a>
+
 </div>
 
 <?php include '../includes/footerdashboard.php'; ?>
