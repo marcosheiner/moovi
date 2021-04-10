@@ -1,4 +1,5 @@
 <?php
+	header("content-type: text/html;charset=utf-8");
 	// Database credentials
 	define('DB_SERVER', 'localhost');
 	define('DB_USERNAME', 'root');
@@ -11,3 +12,8 @@
 	if (!$mysql_db) {
 		die("Error: Unable to connect " . $mysql_db->connect_error);
 	}
+
+	mysqli_set_charset($mysql_db,"utf8");
+
+
+?>

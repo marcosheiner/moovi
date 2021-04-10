@@ -20,15 +20,15 @@ require_once '../config/config.php'; //conexão banco
 <div class="container">
     <a href="admin_moovi.php" class="btn link-voltar"><i data-feather="arrow-left"></i></a>
 	<br>
-	<h4 class="title-moovi">Cadastrar Embed do Filme</h4>
+	<h4 class="title-moovi">Cadastrar Embed da Série</h4>
     <hr class="linha">
 	<div class="flexbox-admin">
 		<div class="admin-item">
-			<form action="cad_process.php" method="POST" autocomplete="off">
+			<form action="cad_process_serie.php" method="POST" autocomplete="off">
 				<div class="row">
 					<div class="col">
-						<label>Nome do Filme</label>
-						<input type="text" id="nome_filme" name="nome_filme" class="form-control" placeholder="Nome do Filme" require>
+						<label>Nome da Série</label>
+						<input type="text" id="nome_serie" name="nome_serie" class="form-control" placeholder="Nome do Filme" require>
 						
 					</div>
 					<div class="col">
@@ -86,7 +86,7 @@ require_once '../config/config.php'; //conexão banco
 					<div class="col">
 						<br>
 						<label>IMDB</label>
-						<input type="text" id="nota" name="nota" class="form-control" placeholder="imdb" require>
+						<input type="number" id="nota" name="nota" class="form-control" placeholder="imdb" require>
 						
 					</div>
 				</div>

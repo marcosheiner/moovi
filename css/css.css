@@ -27,6 +27,7 @@ body{
 
 .nav-item{
     text-align: center;
+    font-weight: 300;
 }
 
 .nav-item-hover:hover{
@@ -211,6 +212,7 @@ iframe{
 
 .text-aba{
     color: whitesmoke;
+    font-weight: 300;
 }
 
 .back-text{
@@ -280,10 +282,12 @@ label{
     background-color: #a970ff;
     color: white;
     font-weight: 300;
+    
 }
 
 .btn-cadastrar:hover{
     background-color: #9462e0;
+    color: antiquewhite;
 }
 
 .btn-limpar{
@@ -328,4 +332,53 @@ label{
 }
 .page:hover{
     color: #f8f8f8;
+}
+
+/*perfil*/
+.user_moovi{
+    text-transform: capitalize;
+    color: #f5f5f5;
+    
+}
+
+.mr-3{
+    border-radius: 50%;
+}
+
+.media{
+    background-color: #18181b;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.atividade{
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 0);
+}
+
+.btn-perfil{
+    background-color: #a970ff;
+    color: #f5f5f5;
+    font-weight: 300;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+.btn-perfil:hover{
+    background-color: #9462e0;
+    color: antiquewhite;
+}
+
+/*guia*/
+.guia_img{
+    display: flex;
+}
+
+.img_guia{
+    width: 20%;
+    margin-top: 25px;
+    margin-right: 10px;
 }

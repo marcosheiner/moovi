@@ -32,11 +32,28 @@ require_once "../config/config.php";
     $quantidade_pg = ceil($row_pg['num_filmes'] / $qnt_result_pg);
 
 
+    $sel_serie_database = "SELECT * FROM series";
+    $winkel_serie = $mysql_db->query($sel_serie_database) or die($mysql_db->error);
 ?>
 
 <?php include '../includes/menudashboard.php'; ?>
 
     <div class="container" style="margin-bottom: 3em;">
+        
+
+        <div class="alert alert-dark" role="alert">
+            <p><span style="text-transform: capitalize;"><strong><?php echo $_SESSION['username']; ?></strong></span>, você está fazendo uso de uma versão Alfa da Moovi, você foi selecionado para testar durante um determinado periodo. Consulte a aba de atualizações para saber mais sobre correções de erros e afins.</p>
+            <hr>
+            <p>E-mail para suporte: <strong>moovi.suporte@gmail.com</strong></p>
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+            <p>Abrir este site no navegador do celular pode resultar em imagens ou texto desproporcional a tela do seu dispositivo, esperamos resolver esse problema em uma versão beta.</p>
+            <br>
+            <p>Abrir esse site no navegador do celular sem um AdBlock pode resultar em vários anúncios ao clicar no reprodutor do vídeo!</p>
+        
+        </div>
+        
         <br>
         <h1 class="title-moovi">Moovi</h1>
         <p class="welcome-user">Bem Vindo, <?php echo $_SESSION['username']; ?>!</p>
@@ -55,15 +72,13 @@ require_once "../config/config.php";
         <div class="flexbox">
             <?php while($dados_filme = $winkel_filmes->fetch_array()){ ?>
                 <div class="flex-item zoom">
-                    <a href="../filmes/areafilme.php"><img src="<?php echo $dados_filme["link_capa"]; ?>" alt="" class="capas"></a>
+                    <a href="../filmes/areafilme.php?open_filme=<?php echo $dados_filme["id"];?>"><img src="<?php echo $dados_filme["link_capa"]; ?>" alt="" class="capas"></a>
                     <p class="title-video"><?php echo $dados_filme["nome"]; ?></p>
                     <span class="badge badge-light"><?php echo $dados_filme["genero_filme"]; ?></span>
                     <span class="badge badge-grupo"><?php echo $dados_filme["tipo_grupo"]; ?></span>
                     <span class="badge badge-dark"><?php echo $dados_filme["nota"]; ?></span>
                 </div>
-            <?php }?>
-
-            
+            <?php }?>   
         </div>
             <br>
             <?php
@@ -84,8 +99,26 @@ require_once "../config/config.php";
                     }
                 }
                 
-                echo "<a class='link-voltar' href='dashboard.php?pagina=$quantidade_pg'><i data-feather='arrow-right'></i></a>";
+                echo "<a class='link-voltar' href='dashboard.php?pagina=$quantidade_pg'><i data-feather='arrow-right'></i></a><br>";
             ?>
+
+        <br>
+        <h3 class="title-filme-home">Séries</h3>
+        <hr class="linha">
+
+        <br>
+
+        <div class="flexbox">
+            <?php while($dados_serie = $winkel_serie->fetch_array()){ ?>
+                <div class="flex-item zoom">
+                    <a href="../series/areaserie.php?open_serie=<?php echo $dados_serie["id"];?>"><img src="<?php echo $dados_serie["link_capa"]; ?>" alt="" class="capas"></a>
+                    <p class="title-video"><?php echo $dados_serie["nome"]; ?></p>
+                    <span class="badge badge-light"><?php echo $dados_serie["genero_serie"]; ?></span>
+                    <span class="badge badge-grupo"><?php echo $dados_serie["tipo_grupo"]; ?></span>
+                    <span class="badge badge-dark"><?php echo $dados_serie["nota"]; ?></span>
+                </div>
+            <?php }?>   
+        </div>       
             
     </div><!--container-->
 
