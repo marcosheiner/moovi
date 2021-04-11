@@ -49,6 +49,17 @@ body{
     border: solid 3px;
     border-color: #a970ff;
     background-color: #a970ff;
+    border-radius: 15px;
+}
+
+.linha-dois{
+    max-width: 50px;
+    margin: 0px;
+    margin-bottom: 1em;
+    border: solid 3px;
+    border-color: #9462e0;
+    background-color: #9462e0;
+    border-radius: 15px;
     
 }
 
@@ -76,6 +87,25 @@ body{
 }
 .navbar-brand:hover{
     color: whitesmoke;
+}
+
+footer{
+    background-color: #a970ff;
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+}
+
+.item-footer{
+    padding: 25px;
+    color: #f5f5f5;
+}
+
+.text-footer{
+    font-weight: 300;
+    color: #f5f5f5;
+    font-size: small;
+    text-align: justify;
 }
 
 /*home*/
@@ -204,6 +234,8 @@ iframe{
     max-width: 100%;
     width: 100%;
 }
+
+
 
 /*suporte*/
 .tilte-aba{
@@ -381,4 +413,15 @@ label{
     width: 20%;
     margin-top: 25px;
     margin-right: 10px;
+}
+
+/*slide kkkkk*/
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    color: #a970ff!important;
+    border-radius: 50%!important;
+    font-size: x-large!important;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot:hover{
+    background-color: transparent!important;
 }

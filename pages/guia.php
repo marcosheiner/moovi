@@ -23,7 +23,7 @@
             
         </div>
         <br>
-        <p class="text-aba">Não sabe como instalar um AdBlock? <a href="https://chrome.google.com/webstore/detail/ads-killer-adblocker-plus/pgbllmbdjgcalkoimdfcpknbjgnhjclg?hl=pt-BR" target="_blank"> Clique aqui para instalar o adblock</a></p>
+        <p class="text-aba">Não sabe como instalar um AdBlock? <a href="https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom?hl=pt-BR" target="_blank"> Clique aqui para instalar o adblock</a></p>
 
         <br>
         <h5 class="title-moovi">Minha Senha</h5>
