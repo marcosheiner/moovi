@@ -414,14 +414,3 @@ label{
     margin-top: 25px;
     margin-right: 10px;
 }
-
-/*slide kkkkk*/
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
-    color: #a970ff!important;
-    border-radius: 50%!important;
-    font-size: x-large!important;
-}
-
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot:hover{
-    background-color: transparent!important;
-}
