@@ -32,29 +32,34 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="../js/u.js"></script>
+    <script src="../js/mouse.js"></script>
+    <script src="../js/f12.js"></script>
     <script src="../owlcarousel/owl.carousel.min.js"></script>
     <script>
       $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
         dots: false,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
         responsiveClass:true,
         responsive:{
         0:{
-            items:1,
+            items:3,
             nav:true,
-            loop:false
+            loop:true
         },
         600:{
             items:3,
             nav:false,
-            loop:false
+            loop:true
         },
         1000:{
             items:5,
             nav:true,
-            loop:false
+            loop:true
         }
     }
         

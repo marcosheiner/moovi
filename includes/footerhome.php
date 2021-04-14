@@ -35,6 +35,36 @@
     <script src="../js/u.js"></script>
     <script src="../js/mouse.js"></script>
     <script src="../js/f12.js"></script>
+    <script src="../owlcarousel/owl.carousel.min.js"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        dots: false,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        responsiveClass:true,
+        responsive:{
+        0:{
+            items:1,
+            nav:true,
+            loop:true
+        },
+        600:{
+            items:3,
+            nav:false,
+            loop:true
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:true
+        }
+    }
+        
+    })
+    </script>
     <script>
       feather.replace()
     </script>

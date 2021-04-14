@@ -19,7 +19,7 @@
 
 	<div class="back-text">
 		<a href="cad_filme.php" style="text-decoration: none;" class="btn btn-cadastrar">Cadastrar Embed Filme</a><br>
-		<a href="cad_serie.php" style="text-decoration: none;" class="btn btn-cadastrar disabled" disabled>Cadastrar Embed Série</a>
+		<a href="cad_serie.php" style="text-decoration: none;" class="btn btn-cadastrar">Cadastrar Embed Série</a>
 	</div>
 
 </div>

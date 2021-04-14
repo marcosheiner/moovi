@@ -20,48 +20,6 @@ require_once '../config/config.php'; //conexão banco
     $sinopse        =   $_POST['sinopse'];
     $nota           =   $_POST['nota'];
 
-    // Check if username is empty
-    if(empty(trim($_POST['nome_filme']))){
-        $nome_filme_err = 'Insira um nome.';
-    } else{
-        $nome_filme = trim($_POST['nome_filme']);
-    }
-
-    if(empty(trim($_POST['sel_genero']))){
-        $sel_genero_err = 'Insira um gênero.';
-    } else{
-        $sel_genero = trim($_POST['sel_genero']);
-    }
-
-    if(empty(trim($_POST['sel_tipo']))){
-        $sel_tipo_err = 'Insira um tipo.';
-    } else{
-        $sel_tipo = trim($_POST['sel_tipo']);
-    }
-
-    if(empty(trim($_POST['link_embed']))){
-        $link_embed_err = 'Insira um link embed válido.';
-    } else{
-        $link_embed = trim($_POST['link_embed']);
-    }
-
-    if(empty(trim($_POST['capa']))){
-        $capa_err = 'Insira um link de capa.';
-    } else{
-        $capa = trim($_POST['capa']);
-    }
-
-    if(empty(trim($_POST['sinopse']))){
-        $sinopse_err = 'Insira uma sinopse.';
-    } else{
-        $sinopse = trim($_POST['sinopse']);
-    }
-
-    if(empty(trim($_POST['nota']))){
-        $nota_err = 'Insira uma nota.';
-    } else{
-        $nota = trim($_POST['nota']);
-    }
 
 
     if (empty($nome_filme_err) && empty($sel_genero_err) && empty($sel_tipo_err) && empty($link_embed_err) && empty($capa_err) && empty($sinopse_err) && empty($nota_err)) {
@@ -72,7 +30,7 @@ require_once '../config/config.php'; //conexão banco
 
         if (mysqli_affected_rows($mysql_db) != 0 ) {
 
-            header('location: cad_filme.php');
+            header('location: ../pages/cad_filme.php');
 
         } else {
             echo "Oops! ${$username}, não foi possivel cadastrar";

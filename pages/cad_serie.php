@@ -24,7 +24,7 @@ require_once '../config/config.php'; //conexão banco
     <hr class="linha">
 	<div class="flexbox-admin">
 		<div class="admin-item">
-			<form action="cad_process_serie.php" method="POST" autocomplete="off">
+			<form action="../routes/cad_process_serie.php" method="POST" autocomplete="off">
 				<div class="row">
 					<div class="col">
 						<label>Nome da Série</label>

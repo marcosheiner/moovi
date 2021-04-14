@@ -33,10 +33,10 @@
             <a class="nav-link" href="../pages/guia.php">Guia</a>
           </li>
           <li class="nav-item nav-item-hover">
-            <a class="nav-link active" aria-current="page" href="#">Filmes</a>
+            <a class="nav-link active" aria-current="page" href="../pages/filmes.php">Filmes</a>
           </li>
           <li class="nav-item nav-item-hover">
-            <a class="nav-link" href="#">Séries</a>
+            <a class="nav-link" href="../pages/series.php">Séries</a>
           </li>
           <li class="nav-item nav-item-hover">
             <a class="nav-link" href="../pages/perfil.php">Perfil</a>
